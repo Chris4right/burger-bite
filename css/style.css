@@ -1,24 +1,24 @@
+/*******************Global Reset */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
+
+/*******************Declaring Variables */
 :root{
     ---primary-color: #f4f1ea;
-    ---secondary-color:#b83434;
-}
-.color{
-    color: var(---secondary-color);
+    ---secondary-color:#dc2626;
+    ---pre-primary-color: #5a636f;
 }
 html{
     font-family: Roboto, sans-serif;
 }
-.header{
-    background-color: var(---primary-color);
-    min-height: 90vh;
-}
+
+
+/*********************************** Navigation ***********/
 .nav{
-    background-color: white;
     padding: 10px 50px;
 }
 .nav::after{
@@ -29,13 +29,18 @@ html{
 .nav-logo{
     float: left;
 }
-.fa-solid{
+.fa-burger{
     color: #f79753;
 }
 .logo-name{
     color: black;
 }
 .nav-logo a{
+    /* text-decoration: none;
+    font-weight: bold;
+    font-size: 20px; */
+}
+.logo-link{
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
@@ -48,24 +53,64 @@ html{
     list-style: none;
     margin: 0 10px;
 }
+.nav-menu .nav-item .nav-list a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+.nav-menu .nav-item .nav-list a:hover{
+    color: #be3706f2; 
+}
+
+
+/*********************************** btn ***********/
 .btn{
     color: white;
     background-color: #172554;
-    padding: 15px 10px;
+    padding: 15px 25px;
     border-radius: 7px;
     text-decoration: none;
     margin-left: 100px;
 }
+.btn:hover{
+    background-color:  #be3706f2;
+}
 .btn-green{
     color: white;
-    background-color: #31c768;
-    padding: 15px 10px;
+    background-color: #1fa34f;
+    padding: 15px 25px;
     border-radius: 7px;
     text-decoration: none; 
 }
-
-.shopping-icon{
+.btn-green:hover{
+    background-color: #085625;
 }
+.btn-slide-1{
+    color: white;
+    background-color: rgb(66, 192, 28);
+    padding: 15px 25px;
+    border-radius: 7px;
+    text-decoration: none;
+}
+.btn-slide-2{
+    color: white;
+    background-color: rgb(47, 109, 215);
+    padding: 15px 25px;
+    border-radius: 7px;
+    text-decoration: none;
+}
+.btn-slide-1:hover{
+    background-color: #0d6b2f;
+}
+.btn-slide-2:hover{
+    background-color: #0d6b2f;
+}
+
+
+/*********** fontawsome icon ******/
 .bike{
     color: white;
     margin-right: 5px;
@@ -73,21 +118,66 @@ html{
 .shopping-bag{
     background-color: #e75002;
     color: white;
-    padding: 15px;
+    padding: 15px 25px;
     border-radius: 7px;
     margin: 0 10px;
 }
+.shopping-bag:hover{
+    background-color: green;
+}
 
-.nav-menu .nav-item .nav-list a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    
+
+/********************* hero (fast food burger)******/
+.hero-slide-1{
+    background-color:#172554 ;
+    padding: 70px 0;
 }
-.hero{
-    background-color: #172554;
-    padding: 40px 0;
+.custom-shape-divider-bottom-1725362557 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
 }
+
+.custom-shape-divider-bottom-1725362557 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 102px;
+}
+
+.custom-shape-divider-bottom-1725362557 .shape-fill {
+    fill: #F4F1EA;
+}v
+.hero-slide{
+    position: relative;
+}
+.hero-slide-2{
+    background-color:#822020;
+    padding: 70px 0;
+}
+.custom-shape-divider-bottom-1725362557 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1725362557 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 102px;
+}
+
+.custom-shape-divider-bottom-1725362557 .shape-fill {
+    fill: #F4F1EA;
+}
+
 .hero-image-container{
 }
 .hero-image-container img{
@@ -95,18 +185,21 @@ html{
 }
 .hero-first-heading{
     color: #f3cd26;
+    margin-top: 20px;
+    font-size: 30px;
 }
 .hero-second-heading{
     color: white;
-    font-size: 50px;
+    font-size: 90px;
 }
 .hero-para{
     color: white;
-    margin: 10px 0 30px 0;
+    margin: 30px 0 40px 0;
     font-size: 15px;
-    font-style: oblique;
 }
 
+
+/********************* re-useable components (row and col)***********/
 .row{
     max-width: 1000px;
     margin: 0 auto;
@@ -123,16 +216,373 @@ html{
 }
 
 .row [class^=col-]:not(:last-child){
-    margin-right: 20px;
+    margin-right: 35px;
 }
 
 .col-1-of-2{
-    width: calc((100% - 20px) / 2);
+    width: calc((100% - 35px) / 2);
 }
 
+.col-1-of-3{
+    width: calc((100% - 2 * 35px) / 3);
+}
+.col-1-of-4{
+    width: calc((100% - 3 * 35px) / 4);
+}
+
+
+/******** span writeup color****/
+.color{
+    color: var(---secondary-color);
+}
+
+
+/**************** product section (burger made with love and care) **/
 .product-section{
     background-color: var(---primary-color);
+    padding: 100px 0;
 }
 .product-heading{
     text-align: center;
+    margin-bottom: 60px;
+    font-size: 40px;
+}
+.product-textbox{
+    padding: 30px;
+}
+
+.product-textbox:hover{
+    background-color: white;
+    border-radius: 15px;
+}
+
+.down{
+    margin-top: 50px;
+}
+
+.product-image-container{
+
+}
+
+.product-image-container img{
+    width: 100%;
+    border-radius: 30px;
+}
+
+.product-textbox-heading{
+    text-align: center;
+    margin: 15px 0;
+}
+
+.product-textbox-para{
+    text-align: center;
+    color: var(---pre-primary-color);
+}
+
+
+/**************** Advert section (Our popular Burgers) **/
+.advert-section{
+    background-color: var(---primary-color);
+    padding: 100px 0;
+}
+.burger-swiper{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.advert-section-heading{
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 40px;
+}
+.advert-box-container{
+    background-color: white;
+    padding: 15px 0;
+}
+.advert-box{
+    padding-left: 25px;
+}
+.advert-box-image-container{
+    margin: 0 auto;
+    height: 100%;
+}
+.advert-box-image-container img{
+    width: 100%;
+}
+.b4{
+    padding-top: 100px;
+}
+.advert-box-heading{
+    margin: 15px 0;
+}
+.advert-box-para{
+    margin:15px 0 ;
+    color: var(---pre-primary-color);
+}
+.star-rating{
+    color: rgb(227, 207, 30);
+}
+.span-6{
+    color: black;
+    margin-left: 20px;
+}
+
+
+/**************** Delivery section (Your favorite burger is on the way) **/
+.delivery-section{
+    background-color: var(---primary-color);
+    padding: 100px 0;
+}
+.delivery-textbox{
+
+}
+.delivery-textbox-heading{
+    font-size: 40px;
+    margin-top: 40px;
+}
+.delivery-textbox-para{
+    margin: 30px 0;
+    color: var(---pre-primary-color);
+}
+.icon-box{
+
+}
+.icon-box-item{
+    color:var(---secondary-color) ;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.icon-box-para{
+    margin-bottom: 20px;
+    
+}
+
+
+/**************** Chef section (MEET OUR EXPERT CHEF) **/
+.chef-section{
+    padding: 100px 0;
+    background-color: var(---primary-color);
+}
+.chef-section-heading{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 70px;
+}
+.chef-container{
+}
+.chef-image-container{
+    
+}
+.chef-image-container img{
+    width: 80%;
+    border-radius: 20px;
+    margin-left: 30px;
+    text-align: center;
+}
+.chef-textbox{
+    text-align: center;
+}
+.chef-textbox-heading{
+    margin: 20px 0;
+    font-size: 30px;
+}
+.chef-textbox-para{
+    margin: 20px 0;
+    color: var(---pre-primary-color);
+}
+
+
+/**************** reservation section (Reserve your table) **/
+.reservation-section{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../images/f3.jpg");
+    padding: 100px;
+    background-size: cover;
+    width: 100%;
+}
+.reservation-heading{
+    color: white;
+    font-size: 40px;
+}
+.reservation-para{
+    color: white;
+    margin: 40px 0;
+}
+.contact{
+    width: 210px;
+}
+.contact::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.icon-container{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: var(---secondary-color);
+    float: left;
+    text-align: center;
+    line-height: 50px;
+    
+}
+.fa-phone{
+    color: white;
+}
+.text-container{
+    float: right;
+}
+.order{
+    color: white;
+    margin-bottom: 10px;
+}
+.number{
+    color: #f3cd26;
+}
+/**************** form section -under reservation (Reserve your table) **/
+.form-section{
+    background-color: #15803d;
+    text-align: center;
+    padding: 50px;
+}
+.fa-web-awesome-container{
+    width: 130px;
+    margin: 0 auto;
+}
+.fa-web-awesome{
+    color: white;
+    font-size: 120px;
+}
+.form-section{
+    color: white;
+}
+.form-section-heading{
+    color: white;
+    margin-top: 20px;
+    font-size: 40px;
+
+}
+.form-section-heading-h5{
+    color: white;
+    margin: 20px 0;
+    font-size: 20px;
+}
+.form-input{
+    width: 40%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+.input{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom:20px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+.bg-color{
+    background-color: #172554;
+    border: none;
+}
+.bg-color:hover{
+   background-color:  #be3706f2;
+}
+
+
+/**************** subscription section (Join for hot offers) **/
+.subscription{
+    background-color: var(---primary-color);
+    padding: 100px;
+   
+}
+.subscrib-textbox{
+    margin: 0 auto;
+    text-align: center;
+}
+.subscrib-textbox-heading{
+    font-size: 25px;
+}
+.subscrib-textbox-para{
+    margin: 30px 0;
+    font-size: 15px;
+}
+.subscrib-input-box{
+    width: 60%;
+    margin: 0 auto;
+}
+.email-input{
+    padding: 15px 25px;
+    width: 60%;
+    margin-right: 10px;
+    background-color: #9ca3af;
+    color: black;
+    border-radius: 7px;
+}
+
+
+/**************** footer section (Last section) **/
+.footer-section{
+    background-color: #111827;
+    padding: 100px 0;
+}
+.footer-heading{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+.footer-para{
+    color: var(---pre-primary-color);
+    margin-bottom: 20px;
+}
+.footer-para-email{
+    color: white;
+    margin-bottom: 10px;
+}
+.footer-number{
+    color: #e29597;
+}
+.footer-link{
+    display: block;
+    text-decoration: none;
+    margin-bottom: 20px;
+    color: var(---pre-primary-color);
+}
+.footer-link:hover{
+    color: #ad951d;
+}
+.Opening-Hour{
+    color: white;
+    margin-bottom: 20px;
+}
+.media-icon{
+    margin-top: 40px;
+}
+.fa-facebook{
+    color: #60a5fa;
+    font-size: 30px;
+    margin-right: 25px;
+}
+.fa-instagram{
+    color: #eb6c6c;
+    font-size: 30px;
+    margin-right: 25px;
+}
+.fa-twitter{
+    color: #60a5fa;
+    font-size: 30px;
+}
+.horizontal{
+    border: 1px solid var(---pre-primary-color);
+    width: 90%;
+    margin: 40px auto;
+}
+.copyright{
+    color: var(---pre-primary-color);
+    text-align: center;
+    font-size: 15px;
+    font-style:italic;
 }
