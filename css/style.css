@@ -16,10 +16,18 @@ html{
     font-family: Roboto, sans-serif;
 }
 
+body{
+    background-color: var(---primary-color);
+}
+
 
 /*********************************** Navigation ***********/
 .nav{
     padding: 10px 50px;
+    background-color: white;
+    max-width: 1000px;
+    margin: auto;
+    align-items: center;
 }
 .nav::after{
     content: "";
@@ -58,6 +66,7 @@ html{
     color: black;
     font-weight: bold;
     font-size: 20px;
+    align-items: center;
     
 }
 
@@ -94,6 +103,8 @@ html{
     padding: 15px 25px;
     border-radius: 7px;
     text-decoration: none;
+    cursor: pointer;
+    transition: all .1s;
 }
 .btn-slide-2{
     color: white;
@@ -101,6 +112,8 @@ html{
     padding: 15px 25px;
     border-radius: 7px;
     text-decoration: none;
+    cursor: pointer;
+    transition: all .1s;
 }
 .btn-slide-1:hover{
     background-color: #0d6b2f;
@@ -150,7 +163,7 @@ html{
 
 .custom-shape-divider-bottom-1725362557 .shape-fill {
     fill: #F4F1EA;
-}v
+}
 .hero-slide{
     position: relative;
 }
@@ -182,6 +195,13 @@ html{
 }
 .hero-image-container img{
     width: 80%;
+}
+.hero-textbox{
+
+}
+.hero-btn-box{
+    width: 80%;
+    color: yellow ;
 }
 .hero-first-heading{
     color: #f3cd26;
@@ -249,6 +269,7 @@ html{
 }
 .product-textbox{
     padding: 30px;
+    transition: all .7s;
 }
 
 .product-textbox:hover{
@@ -297,6 +318,7 @@ html{
 .advert-box-container{
     background-color: white;
     padding: 15px 0;
+    border-radius: 10px;
 }
 .advert-box{
     padding-left: 25px;
@@ -585,4 +607,159 @@ html{
     text-align: center;
     font-size: 15px;
     font-style:italic;
+}
+
+
+
+
+/*media quary for device width less than 900px(ipad devices)***/
+@media screen and (max-width: 900px){
+    .hero-second-heading {
+        font-size: 50px;
+    }
+    .nav-list{
+        display: none;
+    }
+    .footer-section{
+        padding: 100px 30px;
+    }
+}
+
+
+/*media quary for device width less than 480px(mobile devices)***/
+@media screen and (max-width: 480px){
+    .row{
+        width: 100%;
+        padding: 0 30px;
+        margin: 0 auto;
+    }
+    .row [class^="col-"] {
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .nav {
+        padding: 10px 30px;
+        max-width: 100%;
+        margin: auto;
+        align-items: none;
+    }
+    .nav-menu {
+        float: none; 
+        display: none;
+    }
+    .nav-list {
+        float: none;
+        margin: 0;
+        display: none;
+    }
+    .shopping-bag {
+        padding: 10px 20px;
+        border-radius: 7px;
+        margin: 0;
+    }
+    .btn {
+        padding: 10px 20px;
+        margin-left: 0;
+    }
+    .hero{
+        padding: 50px 0;
+    }
+    .hero-textbox{
+        text-align: center;
+    }
+    .hero-first-heading {
+        font-size: 30px;
+    }
+    .hero-second-heading {
+        font-size: 50px;
+    }
+    .hero-image-container img {
+        display: none;
+    }
+    .hero-btn-box {
+        width: 80%;
+        color: yellow;
+        margin: 0 auto;
+    }
+    .custom-shape-divider-bottom-1725362557{
+        display: none;
+    }
+    .product-section {
+        padding: 50px 0;
+    }
+    .product-heading {
+        margin-bottom: 40px;
+        font-size: 30px;
+    }
+    .product-textbox {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+    .product-textbox-heading {
+        font-size: 25px;
+    }
+    .advert-section {
+        background-color: var(---primary-color);
+        padding: 50px 0;
+    }
+    .advert-box-heading {
+        margin: 10px 0;
+        text-align: center;
+        font-size: 20px;
+    }
+    .star-rating {
+        color: rgb(227, 207, 30);
+        text-align: center;
+    }
+    .delivery-section {
+        padding: 50px 0;
+    }
+    .chef-section {
+        padding: 50px 0;
+    }
+    .chef-section-heading {
+        text-align: center;
+        font-size: 40px;
+        margin: 0 30px 50px 0 30px;
+    }
+    .chef-textbox {
+	margin-bottom: 60px;
+    }
+    .reservation-section {
+        padding: 50px 0;
+    }
+    .form-section-heading {
+        font-size: 30px;
+    }
+    .form-input {
+        width: 100%;
+    }
+    .subscription {
+        padding: 50px 0;
+    }
+    .subscrib-textbox {
+        margin: 0 30px;
+    }
+    .subscrib-textbox-heading {
+        font-size: 30px;
+    }
+    .subscrib-textbox-para {
+        font-size: 20px;
+    }
+    .email-input {
+        padding: 15px 25px;
+        width: 100%;
+        background-color: #9ca3af;
+        color: black;
+        border-radius: 7px;
+    }
+    .btn-green {
+        padding: 10px 20px;
+        margin-top: 12px;
+    }
+    .copyright {
+        font-size: 11px;
+    }
+
 }

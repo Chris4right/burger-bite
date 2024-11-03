@@ -20,13 +20,24 @@ const heroSwiper = new Swiper('.hero-swiper', {
     autoplay:{
         delay:4000
     },
-    slidesPerView:3,
     spaceBetween:40,
 
      // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+
+  breakpoints:{
+    0:{
+      slidesperview: 1,
+    },
+    520:{
+      slidesPerView: 2,
+    },
+    950:{
+      slidesPerView: 3,
+    },
   },
   
   
